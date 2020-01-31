@@ -1,4 +1,5 @@
 import React from 'react';
+import UserContext from './UserContext';
 
 import './UserMenu.css';
 
@@ -33,25 +34,30 @@ class UserMenu extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.currentUser && (
-          <div className="user-menu">
-            <span>Do-list</span>
-            <img
-              className="avatar"
-              alt="User avatar"
-              src={this.props.currentUser.avatar}
-              onClick={this.toggleMenu}
-              ref={this.avatarRef}
-            />
-            {this.state.menuVisible && (
-              <ul>
-                <li onClick={this.props.onLogout}>Logout</li>
-              </ul>
+      <UserContext.Consumer>
+        {(user) => (
+          <div>
+            {user && (
+              <div className="user-menu">
+                <span>Do-list</span>
+                <img
+                  className="avatar"
+                  alt="User avatar"
+                  src={user.avatar}
+                  onClick={this.toggleMenu}
+                  ref={this.avatarRef}
+                />
+                {this.state.menuVisible && (
+                  <ul>
+                    <li onClick={this.props.onLogout}>Logout</li>
+                  </ul>
+                )}
+              </div>
             )}
           </div>
         )}
-      </div>
+
+      </UserContext.Consumer>
     )
   };
 }

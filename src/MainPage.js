@@ -4,13 +4,10 @@ import TodoList from './TodoList';
 
 import './MainPage.css';
 
-const MainPage = ({ currentUser, onLogout }) => (
+const MainPage = ({ onLogout }) => (
   <main class="main-page">
-    <Header 
-      currentUser={currentUser} 
-      onLogout={onLogout} 
-    />
-    <TodoList currentUser={currentUser} />
+    <Header onLogout={onLogout} />
+    <TodoList />
   </main>
 );
 
