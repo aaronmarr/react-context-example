@@ -1,0 +1,38 @@
+.user-menu {
+  text-align: right;
+  background: #3273dc;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-menu > span {
+  color: white;
+}
+
+.user-menu > img {
+  width: 60px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.user-menu > img:hover {
+  cursor: pointer;
+}
+
+.user-menu > ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 4rem;
+}
+
+.user-menu > ul > li {
+  background: #ccc;
+  padding: 0.5rem 1rem;
+}
+
+.user-menu > ul > li:hover {
+  cursor: pointer;
+}
