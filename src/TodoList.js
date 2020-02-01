@@ -5,7 +5,7 @@ import './TodoList.css';
 
 const TodoList = () => (
   <UserContext.Consumer>
-    {(user) => (
+    {({ user }) => (
       <div class="todo-list">
         <p>There are no todos, {user.firstName}!</p>
       </div>

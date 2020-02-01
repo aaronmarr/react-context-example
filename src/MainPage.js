@@ -4,9 +4,9 @@ import TodoList from './TodoList';
 
 import './MainPage.css';
 
-const MainPage = ({ onLogout }) => (
+const MainPage = () => (
   <main class="main-page">
-    <Header onLogout={onLogout} />
+    <Header />
     <TodoList />
   </main>
 );

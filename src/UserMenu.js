@@ -35,7 +35,7 @@ class UserMenu extends React.Component {
   render() {
     return (
       <UserContext.Consumer>
-        {(user) => (
+        {({ onLogout, user }) => (
           <div>
             {user && (
               <div className="user-menu">
@@ -49,7 +49,7 @@ class UserMenu extends React.Component {
                 />
                 {this.state.menuVisible && (
                   <ul>
-                    <li onClick={this.props.onLogout}>Logout</li>
+                    <li onClick={onLogout}>Logout</li>
                   </ul>
                 )}
               </div>

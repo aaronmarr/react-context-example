@@ -1,8 +1,8 @@
 import React from 'react';
 import UserMenu from './UserMenu';
 
-const Header = ({ onLogout }) => (
-  <UserMenu onLogout={onLogout} />
+const Header = () => (
+  <UserMenu />
 );
 
 export default Header;
