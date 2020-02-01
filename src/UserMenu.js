@@ -1,5 +1,5 @@
 import React from 'react';
-import UserContext from './UserContext';
+import { UserConsumer } from './UserContext';
 
 import './UserMenu.css';
 
@@ -34,7 +34,7 @@ class UserMenu extends React.Component {
 
   render() {
     return (
-      <UserContext.Consumer>
+      <UserConsumer>
         {({ onLogout, user }) => (
           <div>
             {user && (
@@ -57,7 +57,7 @@ class UserMenu extends React.Component {
           </div>
         )}
 
-      </UserContext.Consumer>
+      </UserConsumer>
     )
   };
 }

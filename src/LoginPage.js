@@ -1,6 +1,6 @@
 import React from 'react';
 import { login } from './api';
-import UserContext from './UserContext';
+import { UserConsumer } from './UserContext';
 
 import './LoginPage.css';
 
@@ -33,7 +33,7 @@ class LoginPage extends React.Component {
     const { username, password, error, loading } = this.state;
 
     return (
-      <UserContext.Consumer>
+      <UserConsumer>
         {({ onLogin }) => (
           <div>
             <form class="login-form" onSubmit={e => this.handleSubmit(e, onLogin)}>
@@ -63,7 +63,7 @@ class LoginPage extends React.Component {
           </div>
         )}
 
-      </UserContext.Consumer>
+      </UserConsumer>
     );
   }
 }

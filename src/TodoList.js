@@ -1,16 +1,16 @@
 import React from 'react';
-import UserContext from './UserContext';
+import { UserConsumer } from './UserContext';
 
 import './TodoList.css';
 
 const TodoList = () => (
-  <UserContext.Consumer>
+  <UserConsumer>
     {({ user }) => (
       <div class="todo-list">
         <p>There are no todos, {user.firstName}!</p>
       </div>
     )}
-  </UserContext.Consumer>
+  </UserConsumer>
 );
 
 export default TodoList;
